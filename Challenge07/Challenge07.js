@@ -19,13 +19,14 @@
 // ------------------------
 
 const objLat = (obj) => {
-   firstName:
-   lastName :
-   age:
-   hobby: 
 
-    text() 
-        console.log (`my name is ${firstName}  ${lastName} I am ${age} YO , and I love ${hobby} `);
+   this.firstName=firstName;
+   this.lastName=lastName;
+   this.age=age;
+   this.hobby=hobby;
+
+  answer = function() {
+    document.write (`<p> my name is ${firstName}  ${lastName} I am ${age} YO , and I love ${hobby} <p/>`);
 
     }
      
@@ -245,5 +246,4 @@ const classesAvg = (data) => {
     // write your code here
 };
 
-module.exports = { objLat, cvFormatter, applicationsStatics, classesAvg };
-}
+module.exports = { objLat, cvFormatter, applicationsStatics, classesAvg };}

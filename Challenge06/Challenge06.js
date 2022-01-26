@@ -13,13 +13,16 @@ const { TestWatcher } = require("jest");
 
 const findMax = (arr)=>{
     let max=0;
-   for (index=0 ; index<arr.length ; index++){
+   for (let index=0 ; index<arr.length ; index++){
        if (arr[index] > max){
 
         max = arr[index];
-           return max
+           
        }
 
+      
+}
+return max
 }
 
 // 2) ---------------------
@@ -34,12 +37,15 @@ const findMax = (arr)=>{
 
 const sumNums = (arr)=>{
     let sum=0;
-    let index=0;
-    for (index=0 ; index <arr.length ; index++ ){
+
+    for (let index=0 ; index <arr.length ; index++ ){
+        if (typeof arr[0]===typeof arr[index]){
    sum = sum + arr[index];
-    return sum;
+    
 
 }
+    }
+return sum;
 }
 
 
@@ -52,10 +58,15 @@ const sumNums = (arr)=>{
 // 
 // ------------------------
 const reverseArray = (arr)=>{
-    index =arr.length;
-      for (index=arr.length ; index>=0 ; index--){
-  arr = [console.log(arr[index])];
-  }
-  }
-  module.exports = {findMax , sumNums, reverseArray};
+    
+    let newArr = [];
+
+ for (let i=0; i<arr.length; i++){
+ 
+ newArr[i]= arr.pop(arr[i])
+ }
+  return newArr;
 }
+
+
+module.exports = {findMax , sumNums, reverseArray};
