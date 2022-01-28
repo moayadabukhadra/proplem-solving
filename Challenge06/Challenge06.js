@@ -59,14 +59,16 @@ return sum;
 // ------------------------
 const reverseArray = (arr)=>{
     
-    let newArr = [];
+   
 
- for (let i=0; i<arr.length; i++){
- 
- newArr[i]= arr.pop(arr[i])
- }
-  return newArr;
+    for (var i = arr.length - 1; i >= 0; i--) {
+     
+      
+        
 }
+return arr[i];
+ }
+ 
 
 
 module.exports = {findMax , sumNums, reverseArray};

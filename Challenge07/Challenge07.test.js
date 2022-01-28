@@ -186,7 +186,7 @@ describe('Challenge07', () => {
         }
 
         var third_Person = {
-            firstName: 'mark',
+            firstName: 'Mark',
             lastName: 'Kimberly',
             age: 25,
             hobby: 'hiking'

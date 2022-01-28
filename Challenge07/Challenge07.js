@@ -20,16 +20,19 @@
 
 const objLat = (obj) => {
 
-   this.firstName=firstName;
-   this.lastName=lastName;
-   this.age=age;
-   this.hobby=hobby;
+  
+let arr = Object.values(obj);
 
-  answer = function() {
-    document.write (`<p> my name is ${firstName}  ${lastName} I am ${age} YO , and I love ${hobby} <p/>`);
+return `my name is ${arr[0]} ${arr[1]} I am ${arr[2]} YO, and I love ${arr[3]}.`
+    
 
-    }
-     
+      
+  
+   
+    }  
+      
+  
+
     
 
 // 2) ---------------------
@@ -93,9 +96,19 @@ const objLat = (obj) => {
 
 // ------------------------
 const cvFormatter = (arr) => {
+   for (let i=0;i<arr.length;i++){
+   let newArr= [Object.values(arr[i])]
+
+ return newArr
+
+}
+}
+
+
     
-    // write your code here
-};
+   
+
+   
 
 // 3) ---------------------
 //
@@ -246,4 +259,4 @@ const classesAvg = (data) => {
     // write your code here
 };
 
-module.exports = { objLat, cvFormatter, applicationsStatics, classesAvg };}
+module.exports = { objLat, cvFormatter, applicationsStatics, classesAvg };

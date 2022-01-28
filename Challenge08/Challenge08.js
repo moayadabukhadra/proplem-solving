@@ -67,11 +67,26 @@ const customerAndAge = (obj) => {
 // -------------------------------------------------------------------------------------------------------
 
 const getEntries = (obj) => {
+ 
+let key =Object.keys(obj);
+let value =Object.values(obj);
+for (const properties in obj) {
+  return [`${Object.keys(obj)}:${Object.values(obj)}`]
+  
    
-   
-    }
     
-};
+  }
+}
+ 
+  
+
+
+  
+    
+  
+    
+    
+
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 03
