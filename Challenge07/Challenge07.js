@@ -96,13 +96,15 @@ return `my name is ${arr[0]} ${arr[1]} I am ${arr[2]} YO, and I love ${arr[3]}.`
 
 // ------------------------
 const cvFormatter = (arr) => {
-   for (let i=0;i<arr.length;i++){
-   let newArr= [Object.values(arr[i])]
+   for (let i=0 ;i<arr.length;i++){
+let fullName=[i]
 
- return newArr
+fullName=[ `${arr[i].firstName} ${arr[i].lastName}`]
 
+ return fullName
+   }
 }
-}
+
 
 
     

@@ -134,10 +134,25 @@ const employeesBonus = (arr) => {
 // ==> 200
 // ------------------------
 const mostExpensive = (budget, mouseArray, keyBoardArray) => {
-  mouseArray.forEach(element => {
+  keyBoardArray.forEach(element => {
+  let keyMax=Math.max(keyBoardArray);
+  let mouMax=Math.max(mouseArray);
+  let total = keyMax+mouMax;
+  if(total==budget){
+    return budget
+  }
+  
+});
 
+  }
+  
+    
+  
+
+
+
+  
       
-  });
-}
+ 
 
 module.exports = { arrInc, roundDecimals, employeesBonus, mostExpensive };
