@@ -67,16 +67,21 @@ const customerAndAge = (obj) => {
 // -------------------------------------------------------------------------------------------------------
 
 const getEntries = (obj) => {
- 
-let key =Object.keys(obj);
-let value =Object.values(obj);
-for (const properties in obj) {
-  return [`${Object.keys(obj)}:${Object.values(obj)}`]
+ let newArr=[];
+
+  for (const [key, value] of Object.entries(obj)) {
+    let answer=(`${key}: ${value}`);
+    newArr.push(answer)
   
-   
-    
   }
+  return newArr
+
+
+
 }
+    
+  
+
  
   
 
@@ -126,10 +131,32 @@ const courses = [
 const getInfo = (arr) => {
   let coursesName = [];
   let studentsName = [];
-  // write your code here
 
-  return { coursesName, studentsName };
-};
+  for(let i=0;i<arr.length;i++){
+
+Object.values(arr[i])
+let answer = arr[i].course;
+coursesName.push(answer)
+  }
+for(let i=0;i<arr;i++){
+  Object.values(arr[i])
+  let answer1 = arr[i].Students;
+  studentsName.push(answer1)
+
+}
+
+    return  {coursesName,studentsName}
+    
+  
+ }
+
+
+   
+
+
+
+  
+
 
 //  ------------------------------------------------------------------------------------------------------
 // Challenge 04

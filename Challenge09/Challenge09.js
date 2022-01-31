@@ -134,17 +134,35 @@ const employeesBonus = (arr) => {
 // ==> 200
 // ------------------------
 const mostExpensive = (budget, mouseArray, keyBoardArray) => {
-  keyBoardArray.forEach(element => {
-  let keyMax=Math.max(keyBoardArray);
-  let mouMax=Math.max(mouseArray);
-  let total = keyMax+mouMax;
-  if(total==budget){
-    return budget
-  }
-  
-});
+ 
+  let newArr=[];
+  mouseArray.forEach(element => {
+  ;
+  for (let i=0;i<keyBoardArray;i++){
 
+ 
+    let sum = element+keyBoardArray[i]
+    newArr.push(sum)
+    return newArr
   }
+
+  
+  });
+
+  
+
+    
+}
+ 
+ 
+  
+
+   
+ 
+
+
+
+  
   
     
   

@@ -96,14 +96,21 @@ return `my name is ${arr[0]} ${arr[1]} I am ${arr[2]} YO, and I love ${arr[3]}.`
 
 // ------------------------
 const cvFormatter = (arr) => {
-   for (let i=0 ;i<arr.length;i++){
-let fullName=[i]
+let newArr=[];
+arr.forEach(element => {
 
-fullName=[ `${arr[i].firstName} ${arr[i].lastName}`]
+let fullName=(`fullName:${arr.firstName} ${arr.lastName}`);
 
- return fullName
-   }
+newArr.push(fullName);
+    
+});
+
+return newArr
+
 }
+
+
+
 
 
 
