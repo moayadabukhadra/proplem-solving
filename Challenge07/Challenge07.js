@@ -67,7 +67,7 @@ return `my name is ${arr[0]} ${arr[1]} I am ${arr[2]} YO, and I love ${arr[3]}.`
 //     {
 //         firstName: "Isabella",
 //         LastName: null,
-//         yearsOfExperience: 7,
+//         yearsOfExperence: 7,
 //         tech: "Java"
 //     }
 // ]
@@ -96,18 +96,43 @@ return `my name is ${arr[0]} ${arr[1]} I am ${arr[2]} YO, and I love ${arr[3]}.`
 
 // ------------------------
 const cvFormatter = (arr) => {
-let newArr=[];
-arr.forEach(element => {
+var newArr =[];
 
-let fullName=(`fullName:${arr.firstName} ${arr.lastName}`);
+for (let i =0;i<arr.length;i++){
+  
+    if (arr[i].lastName==null && arr[i].yearsOfExperience>1){
+let fullName= arr[i].firstName;
+ let x = {
+     "fullName": fullName,
+     "tech": arr[i].tech
+ }
 
-newArr.push(fullName);
-    
-});
-
-return newArr
-
+newArr.push(x)
+    }
+else if (arr[i].firstName==null && arr[i].yearsOfExperience>1 ){
+    let fullName=arr[i].lastName;
+    let x = {
+        "fullName": fullName,
+        "tech": arr[i].tech
+    }
+    newArr.push(x)
 }
+else if (arr[i].yearsOfExperience>1){
+    let fullName= arr[i].firstName + " " +arr[i].lastName ;
+  let  x= {
+        "fullName": fullName,
+        "tech": arr[i].tech
+    }
+   newArr.push(x)
+}
+
+    }
+  return newArr 
+}
+ 
+
+
+
 
 
 
@@ -140,7 +165,46 @@ return newArr
 
 // ------------------------
 const applicationsStatics = (arr) => {
-    // write your code here
+    let result={};
+    let  python_DevsCounter = 0;
+    let  javaScript_DevsCounter=0;
+    let  dotNet_DevsConter=0;
+    let java_DevsCounter=0;
+    let rejectedCounter=javaScript_DevsCounter;
+    for(let i =0 ;i<arr.length;i++){
+ 
+    if (arr[i].tech=="Java"){
+        java_DevsCounter++
+    }
+    else if(arr[i].tech=="Python"){
+    python_DevsCounter++
+    }
+    else if(arr[i].tech==".Net"){
+        dotNet_DevsConter++
+        }
+        else if(arr[i].tech=="JS"){
+            javaScript_DevsCounter++
+            }
+            else if (arr[i].yearsOfExperience<=1){
+         rejectedCounter++
+            }
+            else if(arr[i].fullName==null){
+
+         rejectedCounter++
+            }
+            
+           
+}
+return result = {
+    python_Devs: python_DevsCounter,
+       javaScript_Devs: javaScript_DevsCounter,
+      dotNet_Devs:  dotNet_DevsConter,
+     java_Devs: java_DevsCounter,    
+     totalApplicants: arr.length,
+     rejectedApplicants: javaScript_DevsCounter
+   
+
+}
 };
 
 // 4) ---------------------
@@ -265,7 +329,7 @@ let data = {
 //  2- You need to round the average to the nearest lower number 
 
 const classesAvg = (data) => {
-    // write your code here
+    
 };
 
 module.exports = { objLat, cvFormatter, applicationsStatics, classesAvg };

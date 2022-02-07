@@ -131,22 +131,13 @@ const courses = [
 const getInfo = (arr) => {
   let coursesName = [];
   let studentsName = [];
-
-  for(let i=0;i<arr.length;i++){
-
-Object.values(arr[i])
-let answer = arr[i].course;
-coursesName.push(answer)
-  }
-for(let i=0;i<arr;i++){
-  Object.values(arr[i])
-  let answer1 = arr[i].Students;
-  studentsName.push(answer1)
-
+for (const element of arr) {
+  
 }
+ 
 
-    return  {coursesName,studentsName}
     
+   return  {coursesName,studentsName} 
   
  }
 
