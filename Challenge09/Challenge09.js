@@ -107,23 +107,34 @@ let result=[];
 
 // ------------------------
 const employeesBonus = (arr) => {
-  
-  arr.forEach(element => {
-   
-      
-        
-     
-  
-      if(element.workHours>=8){
-       return element.salary + "100$"
-      }
-      else if(element.workHours<8){
-      return  element.salary+"50$"
-      }
-    
-  })
-  }
+  let newArr=[];
+  for (let i=0;i<arr.length;i++){
 
+  if (arr[i].workHours>8){
+
+   let x =  parseInt(arr[i].salary)+100;
+
+   arr[i].salary =  x.toString()+"$"
+
+   newArr.push(arr[i])
+
+
+  }
+  if (arr[i].workHours<=8 ){
+
+    let x =  parseInt(arr[i].salary)+50;
+ 
+    arr[i].salary =  x.toString()+"$"
+ 
+    newArr.push(arr[i])
+ 
+ 
+   }
+  
+  }
+return newArr
+
+  }
 
 // 4) ---------------------
 // 
@@ -140,17 +151,34 @@ const employeesBonus = (arr) => {
 // ==> 200
 // ------------------------
 const mostExpensive = (budget, mouseArray, keyBoardArray) => {
- 
+  var x;
   let newArr=[];
-  mouseArray.forEach(element => {
-  
-let answer = mouseArray.element+keyBoardArray.element
-newArr.push(answer);
-   return  newArr
-     
+ let answer =[];
+ var y;
+mouseArray.forEach(element => {
+  keyBoardArray.forEach(element1=>{
+x= element+element1
+newArr.push(x);
+
   })
-    
-  }
+});
+for(let i =0;i<newArr.length;i++){
+if(newArr[i]<=budget){
+
+ answer.push(newArr[i]);
+
+}
+y=Math.max(...answer)
+}
+ return  y
+
+
+  
+
+
+}
+
+
 
 
 
